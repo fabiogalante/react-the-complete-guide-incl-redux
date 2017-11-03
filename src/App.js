@@ -10,7 +10,7 @@ class App extends Component {
             {id: '2', name: 'Flavio', age: 42},
             {id: '3', name: 'Este', age: 41}
         ],
-        otherState: 'teste',
+        otherState: 'Outro State',
         showPersons: false
     };
 
@@ -44,7 +44,7 @@ class App extends Component {
     render() {
         // Inline style
         const style = {
-            backgroundColor: 'white',
+            backgroundColor: 'blue',
             font: 'inherit',
             border: '1px solid blue',
             padding: '8px',
@@ -64,13 +64,32 @@ class App extends Component {
                             key={person.id}
                             changed={(event) => this.nameChangeHandler(event, person.id)}
                         />
-                    })};
+                    })}
                 </div>
             );
+
+            style.backgroundColor = 'red';
+        }
+
+
+
+        // let classes = ['red', 'bold'].join(' ');
+        // console.log(classes);
+
+        const classes = [];
+        if(this.state.persons.length <= 2){
+            classes.push('red');
+        }
+
+        if(this.state.persons.length <= 1){
+            classes.push('bold');
         }
 
         return (
             <div className="App">
+
+                <h1>Hi, I´m a React App</h1>
+                <p className={classes.join(' ')}>This is really working!</p>
                 <button
                     style={style}
                     //onClick={() => this.switchNameHandler('Maximilian!!')}>Switch Name
