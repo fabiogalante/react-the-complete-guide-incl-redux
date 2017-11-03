@@ -2,10 +2,11 @@
     text-align: center;
 }
 
+>
 .red {
     color: red;
 }
 
-.bold{
-    font-style: italic;
+.bold {
+    font-weight: bold;
 }
