@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import './App.css';
-import Person from './Person/person'
+import './containers/App.css';
+import Person from './components/Persons/Person/Person'
 
 class App extends Component {
 
@@ -14,7 +14,7 @@ class App extends Component {
         otherState: 'teste',
         showPersons: false
 
-    }
+    };
 
 
     metodoSlice = () => {

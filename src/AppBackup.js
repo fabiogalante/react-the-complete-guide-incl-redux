@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import './App.css';
-import Person from './Person/person'
+import './containers/App.css';
+import Person from './components/Persons/Person/Person'
 
 class App extends Component {
 
@@ -14,7 +14,7 @@ class App extends Component {
         otherState: 'teste',
         showPersons: false
 
-    }
+    };
 
     switchNameHandler = (newName) => {
         //console.log('click');
@@ -35,7 +35,7 @@ class App extends Component {
         const doesShow = this.state.showPersons;
         console.log(doesShow);
          this.setState({showPersons: !doesShow });
-    }
+    };
 
     nameChangeHandler = (event) => {
         this.setState({
@@ -48,7 +48,7 @@ class App extends Component {
             otherState: 'teste2'
         })
 
-    }
+    };
 
     render() {
 
